@@ -1,55 +1,12 @@
 import Link from 'next/link'
+
+import HeroSection from '@/components/home/HeroSection'
 import { Button } from '@/components/ui/button'
 
 export default function HomePage() {
   return (
     <main className="min-h-screen">
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-b from-blue-50 to-white py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl font-bold text-gray-900 mb-6">
-              Your Journey to Study in Australia Starts Here
-            </h1>
-            <p className="text-xl text-gray-600 mb-8">
-              Professional education consultancy helping Vietnamese students achieve their dreams
-              of studying at top Australian universities.
-            </p>
-            <div className="flex gap-4 justify-center">
-              <Button size="lg" asChild>
-                <Link href="/register">Get Started Free</Link>
-              </Button>
-              <Button size="lg" variant="outline" asChild>
-                <Link href="/universities">Browse Universities</Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="text-4xl font-bold text-blue-600 mb-2">500+</div>
-              <div className="text-gray-600">Students Placed</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-blue-600 mb-2">50+</div>
-              <div className="text-gray-600">Partner Universities</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-blue-600 mb-2">95%</div>
-              <div className="text-gray-600">Visa Success Rate</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-blue-600 mb-2">10+</div>
-              <div className="text-gray-600">Years Experience</div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <HeroSection />
 
       {/* Services Section */}
       <section className="py-16 bg-gray-50">
