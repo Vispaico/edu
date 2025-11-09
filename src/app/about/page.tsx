@@ -1,17 +1,32 @@
-import { Card, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
+import Image from 'next/image'
 import Link from 'next/link'
+import ProfileCard from '@/components/ProfileCard'
 
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero */}
-      <section className="bg-gradient-to-b from-blue-600 to-blue-700 text-white py-20">
+      <section className="relative isolate flex min-h-[60vh] items-center justify-center overflow-hidden bg-gray-900 text-white">
+        <Image
+          src="/images/Bizz-About-Us.webp"
+          alt="Person in front of Office of Bizz Education Vietnam"
+          fill
+          priority
+          sizes="100vw"
+          className="absolute inset-0 -z-10 h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 -z-10 bg-blue-950/70" />
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">About Us</h1>
-          <p className="text-xl text-blue-100 max-w-2xl mx-auto">
-            Your trusted partner for studying in Australia since 2014
-          </p>
+          <div className="mx-auto max-w-3xl space-y-4">
+            <span className="inline-flex items-center rounded-full bg-white/10 px-4 py-1 text-sm font-semibold tracking-wide uppercase backdrop-blur">
+              Since 2014
+            </span>
+            <h1 className="text-4xl font-bold md:text-5xl">About Us</h1>
+            <p className="text-lg text-blue-100 md:text-xl">
+              Your trusted partner for studying in Australia since 2014
+            </p>
+          </div>
         </div>
       </section>
 
@@ -62,23 +77,42 @@ export default function AboutPage() {
       </section>
 
       {/* Team */}
-      <section className="py-16">
+      <section className="relative overflow-hidden py-20">
+        <div className="absolute inset-0 -z-10 bg-linear-to-b from-blue-50 via-white to-transparent" aria-hidden />
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Our Team</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            {[
-              { name: 'Nguyen Van A', role: 'Founder & CEO', exp: '15 years experience' },
-              { name: 'Tran Thi B', role: 'Senior Consultant', exp: '10 years experience' },
-              { name: 'Le Van C', role: 'Visa Specialist', exp: '8 years experience' }
-            ].map((member, idx) => (
-              <Card key={idx}>
-                <CardContent className="pt-6 text-center">
-                  <div className="w-24 h-24 bg-blue-100 rounded-full mx-auto mb-4" />
-                  <h3 className="font-semibold text-lg">{member.name}</h3>
-                  <p className="text-gray-600 text-sm">{member.role}</p>
-                  <p className="text-gray-500 text-xs mt-1">{member.exp}</p>
-                </CardContent>
-              </Card>
+          <div className="mx-auto max-w-3xl text-center">
+            <span className="inline-flex items-center justify-center rounded-full bg-blue-100 px-4 py-1 text-xs font-semibold uppercase tracking-[0.35em] text-blue-600">
+              Meet the advisors
+            </span>
+            <h2 className="mt-4 text-3xl font-bold text-gray-900 sm:text-4xl">Our leadership team</h2>
+            <p className="mt-4 text-gray-600">
+              Bilingual consultants who studied, worked, and built communities across Australia to guide your family every step of the journey.
+            </p>
+          </div>
+
+          <div className="mt-12 grid grid-cols-1 justify-items-center gap-10 md:grid-cols-2 xl:grid-cols-3">
+            {teamMembers.map((member) => (
+              <div key={member.name} className="mx-auto flex w-full max-w-74 flex-col items-center text-center">
+                <ProfileCard
+                  avatarUrl={member.avatarUrl}
+                  miniAvatarUrl={member.miniAvatarUrl}
+                  iconUrl={member.iconUrl}
+                  name={member.name}
+                  title={member.role}
+                  handle={member.handle}
+                  status={member.status}
+                  contactText="Connect"
+                  innerGradient={member.innerGradient}
+                  behindGlowColor={member.behindGlowColor}
+                  behindGlowSize={member.behindGlowSize}
+                  behindGlowEnabled={false}
+                  className="team-card"
+                />
+                <div className="mt-4 w-full space-y-1 text-sm text-gray-500">
+                  <p className="text-center text-balance">{member.focus}</p>
+                  <p className="text-center text-xs text-gray-400 text-balance">{member.location}</p>
+                </div>
+              </div>
             ))}
           </div>
         </div>
@@ -91,7 +125,11 @@ export default function AboutPage() {
           <p className="mb-8 max-w-2xl mx-auto">
             Let us help you achieve your dream of studying in Australia
           </p>
-          <Button size="lg" variant="secondary" asChild>
+          <Button
+            size="lg"
+            className="h-12 rounded-full bg-white px-8 text-base font-semibold text-blue-700 shadow-lg shadow-blue-500/30 transition-transform duration-200 hover:-translate-y-0.5 hover:bg-blue-50 focus-visible:ring-white/60"
+            asChild
+          >
             <Link href="/contact">Contact Us</Link>
           </Button>
         </div>
@@ -99,3 +137,86 @@ export default function AboutPage() {
     </div>
   )
 }
+
+const teamMembers = [
+  {
+    name: 'Nguyen D. Ngan',
+    role: 'Founder & CEO',
+    handle: 'ngan.nguyen',
+    status: 'Visa strategist • 15 yrs',
+    focus: 'Specialises in Go8 partnerships & scholarship negotiations.',
+    location: 'Melbourne & Hanoi',
+    avatarUrl:
+      '/images/team/ngan.webp',
+    miniAvatarUrl:
+      '/images/team/ngan_avatar.webp',
+    iconUrl: '/images/iconpattern.webp',
+    innerGradient: 'linear-gradient(145deg,#0b1c38 0%,#1f4db8 45%,#ef4444 100%)',
+    behindGlowColor: 'rgba(79, 70, 229, 0.6)',
+    behindGlowSize: '55%',
+  },
+  {
+    name: 'Trinh Thao Phuong',
+    role: 'Director of Admissions',
+    handle: 'thao.phuong',
+    status: 'Admissions mentor • 12 yrs',
+    focus: 'Crafts winning SOPs and faculty interviews for business majors.',
+    location: 'Sydney & Hanoi',
+    avatarUrl:
+      '/images/team/phuong.webp',
+    miniAvatarUrl:
+      '/images/team/phuong_avatar.webp',
+    iconUrl: '/images/iconpattern.webp',
+    innerGradient: 'linear-gradient(145deg,#0b1c38 0%,#1f4db8 45%,#ef4444 100%)',
+    behindGlowColor: 'rgba(79, 70, 229, 0.6)',
+    behindGlowSize: '55%',
+  },
+  {
+    name: 'Nguyen D. Ha Van',
+    role: 'Director of Admissions',
+    handle: 'ha.van',
+    status: 'Admissions mentor • 12 yrs',
+    focus: 'Crafts winning SOPs and faculty interviews for business majors.',
+    location: 'Sydney & Hanoi',
+    avatarUrl:
+      '/images/team/van.webp',
+    miniAvatarUrl:
+      '/images/team/van_avatar.webp',
+    iconUrl: '/images/iconpattern.webp',
+    innerGradient: 'linear-gradient(145deg,#0b1c38 0%,#1f4db8 45%,#ef4444 100%)',
+    behindGlowColor: 'rgba(79, 70, 229, 0.6)',
+    behindGlowSize: '55%',
+  },
+  {
+    name: 'Nguyen Bao Phap',
+    role: 'Visa & Compliance Lead',
+    handle: 'bao.phap',
+    status: 'MARA-alignedpadvisor',
+    focus: 'Guides financial evidence, GTE statements, and visa interviews.',
+    location: 'Brisbane & Hanoi',
+    avatarUrl:
+      '/images/team/phap.webp',
+    miniAvatarUrl:
+      '/images/team/phap_avatar.webp',
+    iconUrl: '/images/iconpattern.webp',
+    innerGradient: 'linear-gradient(145deg,#0b1c38 0%,#1f4db8 45%,#ef4444 100%)',
+    behindGlowColor: 'rgba(79, 70, 229, 0.6)',
+    behindGlowSize: '55%',
+  },
+  {
+    name: 'Nguyen Anh Ly',
+    role: 'Student Success Manager',
+    handle: 'anh.ly',
+    status: 'Onshore support • 8 yrs',
+    focus: 'Leads pre-departure coaching and alumni mentoring circles.',
+    location: 'Perth & Hanoi',
+    avatarUrl:
+      '/images/team/ly.webp',
+    miniAvatarUrl:
+      '/images/team/ly_avatar.webp',
+    iconUrl: '/images/iconpattern.webp',
+    innerGradient: 'linear-gradient(145deg,#0b1c38 0%,#1f4db8 45%,#ef4444 100%)',
+    behindGlowColor: 'rgba(79, 70, 229, 0.6)',
+    behindGlowSize: '55%',
+  },
+]

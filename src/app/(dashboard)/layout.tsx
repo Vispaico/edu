@@ -41,10 +41,7 @@ export default function DashboardLayout({
         {/* Sidebar */}
         <aside className="w-64 bg-white border-r min-h-screen fixed">
           <div className="p-4 border-b">
-            <Link href="/" className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-blue-600 rounded-lg" />
-              <span className="font-bold text-lg">Edu Consultancy</span>
-            </Link>
+              <span className="font-bold text-lg">BIZZ EDUCATION</span>
           </div>
 
           <nav className="p-4 space-y-2">

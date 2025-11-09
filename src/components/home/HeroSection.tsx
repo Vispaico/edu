@@ -24,31 +24,32 @@ const stats = [
 
 export function HeroSection() {
   return (
-    <section className="relative overflow-hidden bg-linear-to-b from-blue-50 via-white to-blue-100">
+    <section className="relative isolate overflow-hidden bg-linear-to-b from-blue-50 via-white to-blue-100">
       <div
         aria-hidden="true"
-        className="absolute -top-24 left-1/2 z-0 h-64 w-64 -translate-x-1/2 rounded-full bg-blue-200/50 blur-3xl"
+        className="absolute inset-0 -z-10 bg-linear-to-br from-white/90 via-white/60 to-sky-100/10"
+      />
+      <div
+        aria-hidden="true"
+        className="absolute -top-24 left-1/2 z-0 h-64 w-64 -translate-x-1/2 rounded-full bg-blue-200/60 blur-3xl"
       />
       <div
         aria-hidden="true"
         className="absolute -bottom-32 right-0 z-0 h-80 w-80 translate-x-1/3 rounded-full bg-sky-200/70 blur-3xl"
       />
 
-      <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col-reverse gap-16 px-6 pb-28 pt-20 md:px-10 lg:flex-row lg:items-center lg:gap-12">
+      <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col-reverse gap-6 px-6 pb-24 pt-10 sm:gap-10 sm:pt-16 md:px-10 lg:flex-row lg:items-center lg:gap-16">
         <div className="flex w-full flex-1 flex-col gap-10 text-slate-900">
           <div className="space-y-6">
-            <span className="inline-flex items-center gap-2 rounded-full bg-blue-100/60 px-4 py-2 text-sm font-medium text-blue-700 ring-1 ring-blue-200/70">
-              Tailored Australian study pathways
-            </span>
             <h1 className="text-pretty text-4xl font-bold leading-tight tracking-tight text-slate-900 sm:text-5xl xl:text-6xl">
-              Design your
+              Study in Australia
               <span className="relative mx-3 inline-flex">
                 <span className="absolute inset-x-0 bottom-1 h-3 rounded-full bg-blue-200" aria-hidden="true" />
                 <span className="relative bg-linear-to-r from-blue-600 to-sky-500 bg-clip-text text-transparent">
-                  global education
+                  with Confidence.
                 </span>
               </span>
-              journey with experts who care.
+              A journey with experts who care.
             </h1>
             <p className="max-w-2xl text-lg text-slate-600 sm:text-xl">
               Our dedicated advisors mentor you from course selection to visa approval, ensuring a confident transition into top Australian universities.
@@ -94,36 +95,25 @@ export function HeroSection() {
           </div>
         </div>
 
-        <div className="relative flex flex-1 items-center justify-center">
+        <div className="relative flex flex-1 items-center justify-center  lg:justify-end">
           <div
             aria-hidden="true"
             className="absolute -left-10 top-12 h-72 w-72 rounded-full bg-sky-100/70 blur-3xl lg:-left-16"
           />
-          <div className="relative w-full max-w-md overflow-hidden rounded-3xl border border-white/40 bg-white/80 p-6 shadow-2xl ring-1 ring-blue-100/70 backdrop-blur">
-            {/* Replace illustration with brand-specific artwork when available. */}
-            <Image
-              alt="Student journey illustration"
-              src="/images/hero-student-journey.svg"
-              width={520}
-              height={420}
-              priority
-              className="size-full object-contain"
-            />
+          <div className="relative w-full max-w-152 -translate-y-8 overflow-hidden rounded-[2.5rem] border border-white/60 bg-white/70 shadow-2xl ring-1 ring-blue-100/70 backdrop-blur md:-translate-y-10 md:max-w-160 lg:-translate-y-16 lg:max-w-184">
+            <div className="relative aspect-square">
+              <Image
+                alt="Student studying in Australia"
+                src="/images/Study-in-Australia.webp"
+                fill
+                priority
+                sizes="(min-width: 1280px) 736px, (min-width: 1024px) 600px, (min-width: 768px) 70vw, 90vw"
+                className="absolute inset-0 size-full rounded-[2.25rem] object-cover"
+              />
+            </div>
           </div>
         </div>
       </div>
-
-      <svg
-        aria-hidden="true"
-        className="absolute bottom-0 left-0 w-full text-blue-200"
-        viewBox="0 0 1440 160"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M0 80L60 88C120 96 240 112 360 109.3C480 107 600 85 720 82.7C840 80 960 96 1080 104C1200 112 1320 112 1380 112L1440 112V160H1380C1320 160 1200 160 1080 160C960 160 840 160 720 160C600 160 480 160 360 160C240 160 120 160 60 160H0V80Z"
-          fill="currentColor"
-        />
-      </svg>
     </section>
   )
 }
