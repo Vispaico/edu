@@ -38,8 +38,13 @@
 }
 
 .team-card {
-  width: min(18.5rem, 100%);
+  width: min(100%, 24.5rem);
   margin-inline: auto;
+}
+
+.team-card .pc-card-shell,
+.team-card .pc-card {
+  width: 100%;
 }
 
 /*

@@ -92,7 +92,7 @@ export default function AboutPage() {
 
           <div className="mt-12 grid grid-cols-1 justify-items-center gap-10 md:grid-cols-2 xl:grid-cols-3">
             {teamMembers.map((member) => (
-              <div key={member.name} className="mx-auto flex w-full max-w-74 flex-col items-center text-center">
+              <div key={member.name} className="mx-auto flex w-full max-w-98 flex-col items-center text-center">
                 <ProfileCard
                   avatarUrl={member.avatarUrl}
                   miniAvatarUrl={member.miniAvatarUrl}
@@ -100,8 +100,8 @@ export default function AboutPage() {
                   name={member.name}
                   title={member.role}
                   handle={member.handle}
-                  status={member.status}
                   contactText="Connect"
+                  contactHref="/contact"
                   innerGradient={member.innerGradient}
                   behindGlowColor={member.behindGlowColor}
                   behindGlowSize={member.behindGlowSize}
@@ -141,10 +141,9 @@ export default function AboutPage() {
 const teamMembers = [
   {
     name: 'Nguyen D. Ngan',
-    role: 'Founder & CEO',
+    role: 'Branch Director',
     handle: 'ngan.nguyen',
-    status: 'Visa strategist • 15 yrs',
-    focus: 'Specialises in Go8 partnerships & scholarship negotiations.',
+    focus: 'Chairwoman of QVN Education and Study Abroad-Branch Director of Bizz Education Vietnam.',
     location: 'Melbourne & Hanoi',
     avatarUrl:
       '/images/team/ngan.webp',
@@ -156,28 +155,11 @@ const teamMembers = [
     behindGlowSize: '55%',
   },
   {
-    name: 'Trinh Thao Phuong',
-    role: 'Director of Admissions',
-    handle: 'thao.phuong',
-    status: 'Admissions mentor • 12 yrs',
-    focus: 'Crafts winning SOPs and faculty interviews for business majors.',
-    location: 'Sydney & Hanoi',
-    avatarUrl:
-      '/images/team/phuong.webp',
-    miniAvatarUrl:
-      '/images/team/phuong_avatar.webp',
-    iconUrl: '/images/iconpattern.webp',
-    innerGradient: 'linear-gradient(145deg,#0b1c38 0%,#1f4db8 45%,#ef4444 100%)',
-    behindGlowColor: 'rgba(79, 70, 229, 0.6)',
-    behindGlowSize: '55%',
-  },
-  {
     name: 'Nguyen D. Ha Van',
-    role: 'Director of Admissions',
+    role: 'General Director',
     handle: 'ha.van',
-    status: 'Admissions mentor • 12 yrs',
-    focus: 'Crafts winning SOPs and faculty interviews for business majors.',
-    location: 'Sydney & Hanoi',
+    focus: 'General Director of QVN Education and Study Abroad-Operation Manager of Bizz Education Vietnam.',
+    location: 'Hanoi',
     avatarUrl:
       '/images/team/van.webp',
     miniAvatarUrl:
@@ -188,12 +170,26 @@ const teamMembers = [
     behindGlowSize: '55%',
   },
   {
+    name: 'Trinh Thao Phuong',
+    role: 'Admin Executive',
+    handle: 'thao.phuong',
+    focus: 'Admin Executive of Bizz Education Vietnam.',
+    location: 'Hanoi',
+    avatarUrl:
+      '/images/team/phuong.webp',
+    miniAvatarUrl:
+      '/images/team/phuong_avatar.webp',
+    iconUrl: '/images/iconpattern.webp',
+    innerGradient: 'linear-gradient(145deg,#0b1c38 0%,#1f4db8 45%,#ef4444 100%)',
+    behindGlowColor: 'rgba(79, 70, 229, 0.6)',
+    behindGlowSize: '55%',
+  },
+  {
     name: 'Nguyen Bao Phap',
-    role: 'Visa & Compliance Lead',
+    role: 'Marketing Specialist',
     handle: 'bao.phap',
-    status: 'MARA-alignedpadvisor',
-    focus: 'Guides financial evidence, GTE statements, and visa interviews.',
-    location: 'Brisbane & Hanoi',
+    focus: 'Marketing Specialist and Education Consultant of Bizz Education Vietnam.',
+    location: 'Hanoi',
     avatarUrl:
       '/images/team/phap.webp',
     miniAvatarUrl:
@@ -205,11 +201,10 @@ const teamMembers = [
   },
   {
     name: 'Nguyen Anh Ly',
-    role: 'Student Success Manager',
+    role: 'Education Consultant',
     handle: 'anh.ly',
-    status: 'Onshore support • 8 yrs',
-    focus: 'Leads pre-departure coaching and alumni mentoring circles.',
-    location: 'Perth & Hanoi',
+    focus: 'Education Consultant of Bizz Education Vietnam.',
+    location: 'Hanoi',
     avatarUrl:
       '/images/team/ly.webp',
     miniAvatarUrl:
