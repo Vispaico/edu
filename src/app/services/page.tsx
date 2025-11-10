@@ -2,6 +2,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button'
 import { servicesList } from '@/data/services'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function ServicesPage() {
   return (
@@ -9,13 +10,36 @@ export default function ServicesPage() {
       {/* Hero Section */}
       <section className="bg-white py-16">
         <div className="container mx-auto px-4">
-          <div className="mx-auto max-w-4xl text-center">
+          <div className="mx-auto max-w-4xl text-center space-y-8">
             <h1 className="mb-4 text-4xl font-bold text-gray-900 md:text-5xl">
               Our Services
             </h1>
             <p className="text-lg text-gray-600 md:text-xl">
               Comprehensive support for every step of your study abroad journey
             </p>
+            <Card className="mx-auto max-w-2xl border-blue-100 bg-blue-50/40 shadow-sm">
+              <CardContent className="flex flex-col items-center gap-4 px-6 py-6 text-left sm:flex-row sm:items-start">
+                <div className="flex-shrink-0 overflow-hidden rounded-full border border-blue-200 shadow-sm">
+                  <Image
+                    src="/images/team/ngan_avatar.webp"
+                    alt="Nguyen D. Ngan"
+                    width={64}
+                    height={64}
+                    className="h-16 w-16 object-cover"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="space-y-2 text-center sm:text-left">
+                  <p className="text-sm text-gray-600">
+                    “Every family&apos;s journey is different, so our consultants map out the exact coaching, documentation, and visa milestones you need. That curated plan is what keeps students confident—from first consultation to orientation week.”
+                  </p>
+                  <div>
+                    <p className="text-sm font-semibold text-gray-900">Nguyen D. Ngan · Branch Director</p>
+                    <p className="text-xs uppercase tracking-wide text-blue-600">BIZZ Education Vietnam</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>

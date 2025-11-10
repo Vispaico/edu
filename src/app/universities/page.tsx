@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 
@@ -69,13 +70,36 @@ export default function UniversitiesPage() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto text-center mb-12">
+        <div className="max-w-4xl mx-auto text-center mb-12 space-y-8">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Australian Universities
           </h1>
           <p className="text-xl text-gray-600">
             Browse top-ranked universities offering world-class education
           </p>
+          <Card className="mx-auto max-w-2xl border-blue-100 bg-white/80 shadow-sm">
+            <CardContent className="flex flex-col items-center gap-4 px-6 py-6 text-left sm:flex-row sm:items-start">
+              <div className="flex-shrink-0 overflow-hidden rounded-full border border-blue-100 shadow-sm">
+                <Image
+                  src="/images/team/van_avatar.webp"
+                  alt="Ha Van"
+                  width={64}
+                  height={64}
+                  className="h-16 w-16 object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div className="space-y-2 text-center sm:text-left">
+                <p className="text-sm text-gray-600">
+                  “Choosing the right university isn&apos;t about ranking alone—it&apos;s about matching your ambitions with a campus that supports them. Our team curates shortlists based on your goals, portfolio, and visa strategy so you can focus on thriving once you land in Australia.”
+                </p>
+                <div>
+                  <p className="text-sm font-semibold text-gray-900">Ha Van · General Director</p>
+                  <p className="text-xs uppercase tracking-wide text-blue-600">BIZZ Education Vietnam</p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
