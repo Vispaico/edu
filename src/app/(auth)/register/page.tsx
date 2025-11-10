@@ -140,7 +140,12 @@ export default function RegisterPage() {
               />
             </div>
 
-            <Button type="submit" className="w-full" disabled={loading}>
+            <Button
+              type="submit"
+              variant="default"
+              className="w-full bg-blue-600 text-white hover:bg-blue-700 focus-visible:ring-blue-200"
+              disabled={loading}
+            >
               {loading ? 'Creating account...' : 'Create Account'}
             </Button>
           </form>

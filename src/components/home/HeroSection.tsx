@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import { BadgeCheck, Globe2, GraduationCap } from "lucide-react"
+import { BadgeCheck, ChevronRight, Globe2, GraduationCap } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 
@@ -56,22 +56,21 @@ export function HeroSection() {
             </p>
           </div>
 
-          <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
+          <div className="flex flex-col items-start gap-3">
             <Button
               size="lg"
-              className="h-12 rounded-full px-7 text-base font-semibold shadow-lg shadow-blue-500/10 transition-transform duration-200 hover:-translate-y-0.5 hover:shadow-blue-500/20"
+              className="h-12 rounded-full px-7 text-base font-semibold shadow-lg shadow-blue-500/20 transition-transform duration-200 hover:-translate-y-0.5 bg-blue-600 text-white hover:bg-blue-700 focus-visible:ring-blue-200"
               asChild
             >
-              <Link href="/register">Start for Free</Link>
+              <Link href="/register" className="flex items-center gap-2">
+                <GraduationCap className="h-4 w-4" aria-hidden />
+                <span>Start for Free</span>
+                <ChevronRight className="h-4 w-4" aria-hidden />
+              </Link>
             </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="h-12 rounded-full border-blue-300 bg-white/70 px-7 text-base font-semibold text-blue-700 transition-transform duration-200 hover:-translate-y-0.5 hover:bg-white"
-              asChild
-            >
-              <Link href="/universities">Explore Universities</Link>
-            </Button>
+            <p className="max-w-md text-sm text-slate-600 sm:text-base">
+              Signing up is free. Unlock free resources.
+            </p>
           </div>
 
           <div className="flex flex-wrap gap-6">
@@ -110,6 +109,7 @@ export function HeroSection() {
                 sizes="(min-width: 1280px) 736px, (min-width: 1024px) 600px, (min-width: 768px) 70vw, 90vw"
                 className="absolute inset-0 size-full rounded-[2.25rem] object-cover"
               />
+              <div aria-hidden className="hero-image-shine rounded-[2.25rem]" />
             </div>
           </div>
         </div>

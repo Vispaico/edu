@@ -44,7 +44,7 @@ export default function StudentDocumentsPage() {
               onChange={handleFileUpload}
               disabled={uploading}
             />
-            <Button disabled={uploading}>
+            <Button disabled={uploading} className="bg-blue-600 text-white hover:bg-blue-700 focus-visible:ring-blue-200">
               {uploading ? 'Uploading...' : 'Upload'}
             </Button>
           </div>
@@ -71,7 +71,7 @@ export default function StudentDocumentsPage() {
                   }`}>
                     {doc.status}
                   </span>
-                  <Button size="sm" variant="outline">Download</Button>
+                  <Button size="sm" className="bg-blue-600 text-white hover:bg-blue-700 focus-visible:ring-blue-200">Download</Button>
                 </div>
               </div>
             </CardContent>

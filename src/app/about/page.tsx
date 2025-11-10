@@ -9,7 +9,7 @@ export default function AboutPage() {
       {/* Hero */}
       <section className="relative isolate flex min-h-[60vh] items-center justify-center overflow-hidden bg-gray-900 text-white">
         <Image
-          src="/images/Bizz-About-Us.webp"
+          src="/images/Bizz-About-Us_VN.webp"
           alt="Person in front of Office of Bizz Education Vietnam"
           fill
           priority

@@ -31,7 +31,7 @@ export default function StudentApplicationsPage() {
           <h1 className="text-3xl font-bold mb-2">My Applications</h1>
           <p className="text-gray-600">Track and manage your university applications</p>
         </div>
-        <Button asChild>
+        <Button asChild className="bg-blue-600 text-white hover:bg-blue-700 focus-visible:ring-blue-200">
           <Link href="/student/applications/new">New Application</Link>
         </Button>
       </div>
@@ -65,7 +65,7 @@ export default function StudentApplicationsPage() {
                   <p className="font-medium">{app.lastUpdate}</p>
                 </div>
               </div>
-              <Button variant="outline" className="w-full">View Details</Button>
+              <Button className="w-full bg-blue-600 text-white hover:bg-blue-700 focus-visible:ring-blue-200">View Details</Button>
             </CardContent>
           </Card>
         ))}

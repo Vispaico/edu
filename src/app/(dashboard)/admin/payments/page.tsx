@@ -62,7 +62,7 @@ export default function AdminPaymentsPage() {
                       </span>
                     </div>
                     {payment.status === 'Pending' && (
-                      <Button size="sm">Verify</Button>
+                      <Button size="sm" className="bg-blue-600 text-white hover:bg-blue-700 focus-visible:ring-blue-200">Verify</Button>
                     )}
                   </div>
                 </div>

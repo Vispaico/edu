@@ -93,7 +93,7 @@ export default function UniversitiesPage() {
                 <div className="text-sm">
                   <span className="font-semibold">Tuition:</span> {uni.tuition}
                 </div>
-                <Button asChild className="w-full mt-4">
+                <Button asChild className="w-full mt-4 bg-blue-600 text-white hover:bg-blue-700 focus-visible:ring-blue-200">
                   <Link href={`/universities/${uni.slug}`}>View Details</Link>
                 </Button>
               </CardContent>

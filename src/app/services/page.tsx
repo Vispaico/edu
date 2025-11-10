@@ -45,7 +45,7 @@ export default function ServicesPage() {
                     <Button
                       asChild
                       size="lg"
-                      className="mt-6 w-full rounded-full font-semibold"
+                      className="mt-6 w-full rounded-full font-semibold bg-blue-600 text-white hover:bg-blue-700 focus-visible:ring-blue-200"
                     >
                       <Link href={href}>Explore {service.title}</Link>
                     </Button>

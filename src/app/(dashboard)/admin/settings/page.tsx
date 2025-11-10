@@ -28,7 +28,7 @@ export default function AdminSettingsPage() {
             <Label htmlFor="email">Email</Label>
             <Input id="email" type="email" defaultValue="admin@educonsultancy.vn" />
           </div>
-          <Button>Save Changes</Button>
+          <Button className="bg-blue-600 text-white hover:bg-blue-700 focus-visible:ring-blue-200">Save Changes</Button>
         </CardContent>
       </Card>
 
@@ -51,7 +51,7 @@ export default function AdminSettingsPage() {
             <Label htmlFor="phone">Contact Phone</Label>
             <Input id="phone" defaultValue="+84 123 456 789" />
           </div>
-          <Button>Update Settings</Button>
+          <Button className="bg-blue-600 text-white hover:bg-blue-700 focus-visible:ring-blue-200">Update Settings</Button>
         </CardContent>
       </Card>
 
@@ -70,7 +70,7 @@ export default function AdminSettingsPage() {
             <Label htmlFor="smtpPort">SMTP Port</Label>
             <Input id="smtpPort" defaultValue="587" />
           </div>
-          <Button>Save Email Settings</Button>
+          <Button className="bg-blue-600 text-white hover:bg-blue-700 focus-visible:ring-blue-200">Save Email Settings</Button>
         </CardContent>
       </Card>
     </div>

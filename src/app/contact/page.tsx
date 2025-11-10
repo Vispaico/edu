@@ -72,7 +72,12 @@ export default function ContactPage() {
                     <Label htmlFor="message">Message</Label>
                     <Textarea id="message" name="message" rows={4} value={formData.message} onChange={handleChange} required />
                   </div>
-                  <Button type="submit" className="w-full">Send Message</Button>
+                  <Button
+                    type="submit"
+                    className="w-full bg-blue-600 text-white hover:bg-blue-700 focus-visible:ring-blue-200"
+                  >
+                    Send Message
+                  </Button>
                 </form>
               )}
             </CardContent>

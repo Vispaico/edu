@@ -75,7 +75,7 @@ export default function StudentMessagesPage() {
               onChange={(e) => setNewMessage(e.target.value)}
               rows={3}
             />
-            <Button className="self-end">Send</Button>
+            <Button className="self-end bg-blue-600 text-white hover:bg-blue-700 focus-visible:ring-blue-200">Send</Button>
           </div>
         </CardContent>
       </Card>

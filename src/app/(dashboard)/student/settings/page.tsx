@@ -32,7 +32,7 @@ export default function StudentSettingsPage() {
             <Label htmlFor="phone">Phone Number</Label>
             <Input id="phone" defaultValue="+84 123 456 789" />
           </div>
-          <Button>Save Changes</Button>
+          <Button className="bg-blue-600 text-white hover:bg-blue-700 focus-visible:ring-blue-200">Save Changes</Button>
         </CardContent>
       </Card>
 
@@ -55,7 +55,7 @@ export default function StudentSettingsPage() {
             <Label htmlFor="confirm">Confirm New Password</Label>
             <Input id="confirm" type="password" />
           </div>
-          <Button>Update Password</Button>
+          <Button className="bg-blue-600 text-white hover:bg-blue-700 focus-visible:ring-blue-200">Update Password</Button>
         </CardContent>
       </Card>
 

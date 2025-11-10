@@ -18,7 +18,7 @@ export default function AdminBlogPage() {
           <h1 className="text-3xl font-bold mb-2">Blog Management</h1>
           <p className="text-gray-600">Create and manage blog posts</p>
         </div>
-        <Button asChild>
+        <Button asChild className="bg-blue-600 text-white hover:bg-blue-700 focus-visible:ring-blue-200">
           <Link href="/admin/blog/new">Create New Post</Link>
         </Button>
       </div>
@@ -54,7 +54,9 @@ export default function AdminBlogPage() {
       {/* Search */}
       <div className="flex gap-4">
         <Input placeholder="Search posts..." className="max-w-sm" />
-        <Button variant="outline">Filter</Button>
+        <Button variant="outline" className="border-blue-300 text-blue-700 hover:bg-blue-50 hover:text-blue-800">
+          Filter
+        </Button>
       </div>
 
       {/* Posts List */}
@@ -81,9 +83,9 @@ export default function AdminBlogPage() {
                     </div>
                   </div>
                   <div className="flex gap-2">
-                    <Button size="sm" variant="outline">Edit</Button>
-                    <Button size="sm" variant="outline">View</Button>
-                    <Button size="sm" variant="outline">Delete</Button>
+                    <Button size="sm" className="bg-blue-600 text-white hover:bg-blue-700 focus-visible:ring-blue-200">Edit</Button>
+                    <Button size="sm" className="bg-blue-600 text-white hover:bg-blue-700 focus-visible:ring-blue-200">View</Button>
+                    <Button size="sm" variant="destructive">Delete</Button>
                   </div>
                 </div>
               </div>

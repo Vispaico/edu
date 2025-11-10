@@ -17,13 +17,13 @@ export default function AdminStudentsPage() {
           <h1 className="text-3xl font-bold mb-2">Students</h1>
           <p className="text-gray-600">Manage all registered students</p>
         </div>
-        <Button>Add New Student</Button>
+        <Button className="bg-blue-600 text-white hover:bg-blue-700 focus-visible:ring-blue-200">Add New Student</Button>
       </div>
 
       {/* Search */}
       <div className="flex gap-4">
         <Input placeholder="Search students..." className="max-w-sm" />
-        <Button variant="outline">Filter</Button>
+        <Button variant="outline" className="border-blue-300 text-blue-700 hover:bg-blue-50 hover:text-blue-800">Filter</Button>
       </div>
 
       {/* Students Table */}
@@ -45,7 +45,7 @@ export default function AdminStudentsPage() {
                       {student.status}
                     </span>
                   </div>
-                  <Button size="sm" variant="outline">View Details</Button>
+                  <Button size="sm" className="bg-blue-600 text-white hover:bg-blue-700 focus-visible:ring-blue-200">View Details</Button>
                 </div>
               </div>
             ))}
