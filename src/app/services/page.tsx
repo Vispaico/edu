@@ -19,7 +19,7 @@ export default function ServicesPage() {
             </p>
             <Card className="mx-auto max-w-2xl border-blue-100 bg-blue-50/40 shadow-sm">
               <CardContent className="flex flex-col items-center gap-4 px-6 py-6 text-left sm:flex-row sm:items-start">
-                <div className="flex-shrink-0 overflow-hidden rounded-full border border-blue-200 shadow-sm">
+                <div className="shrink-0 overflow-hidden rounded-full border border-blue-200 shadow-sm">
                   <Image
                     src="/images/team/ngan_avatar.webp"
                     alt="Nguyen D. Ngan"
@@ -34,7 +34,7 @@ export default function ServicesPage() {
                     “Every family&apos;s journey is different, so our consultants map out the exact coaching, documentation, and visa milestones you need. That curated plan is what keeps students confident—from first consultation to orientation week.”
                   </p>
                   <div>
-                    <p className="text-sm font-semibold text-gray-900">Nguyen D. Ngan · Branch Director</p>
+                    <p className="text-sm font-semibold text-gray-900">Nguyen Duyen Ngan · Branch Director</p>
                     <p className="text-xs uppercase tracking-wide text-blue-600">BIZZ Education Vietnam</p>
                   </div>
                 </div>

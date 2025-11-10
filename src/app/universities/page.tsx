@@ -79,7 +79,7 @@ export default function UniversitiesPage() {
           </p>
           <Card className="mx-auto max-w-2xl border-blue-100 bg-white/80 shadow-sm">
             <CardContent className="flex flex-col items-center gap-4 px-6 py-6 text-left sm:flex-row sm:items-start">
-              <div className="flex-shrink-0 overflow-hidden rounded-full border border-blue-100 shadow-sm">
+              <div className="shrink-0 overflow-hidden rounded-full border border-blue-100 shadow-sm">
                 <Image
                   src="/images/team/van_avatar.webp"
                   alt="Ha Van"
@@ -94,7 +94,7 @@ export default function UniversitiesPage() {
                   “Choosing the right university isn&apos;t about ranking alone—it&apos;s about matching your ambitions with a campus that supports them. Our team curates shortlists based on your goals, portfolio, and visa strategy so you can focus on thriving once you land in Australia.”
                 </p>
                 <div>
-                  <p className="text-sm font-semibold text-gray-900">Ha Van · General Director</p>
+                  <p className="text-sm font-semibold text-gray-900">Nguyen Duyen Ha Van · Operation Manager</p>
                   <p className="text-xs uppercase tracking-wide text-blue-600">BIZZ Education Vietnam</p>
                 </div>
               </div>

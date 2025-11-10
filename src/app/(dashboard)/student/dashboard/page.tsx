@@ -141,7 +141,7 @@ export default function StudentDashboard() {
             <div className="text-4xl mb-2">📄</div>
             <h3 className="font-semibold mb-2">Upload Documents</h3>
             <p className="text-sm text-gray-600 mb-4">Submit required documents</p>
-            <Button asChild className="w-full">
+            <Button asChild className="w-full bg-blue-600 text-white hover:bg-blue-700 focus-visible:ring-blue-200">
               <Link href="/student/documents">Upload</Link>
             </Button>
           </CardContent>
@@ -152,7 +152,7 @@ export default function StudentDashboard() {
             <div className="text-4xl mb-2">📚</div>
             <h3 className="font-semibold mb-2">Book Test</h3>
             <p className="text-sm text-gray-600 mb-4">Schedule IELTS, TOEFL, or PTE</p>
-            <Button asChild className="w-full">
+            <Button asChild className="w-full bg-blue-600 text-white hover:bg-blue-700 focus-visible:ring-blue-200">
               <Link href="/student/tests">Book Now</Link>
             </Button>
           </CardContent>

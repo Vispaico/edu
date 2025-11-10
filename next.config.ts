@@ -9,7 +9,7 @@ const nextConfig = {
   },
   experimental: {
     outputFileTracingIncludes: {
-      "/api/student-downloads/[file]": ["./templates/**/*"],
+      "/api/student-downloads/[file]": ["./src/templates/**/*"],
     },
   },
 }

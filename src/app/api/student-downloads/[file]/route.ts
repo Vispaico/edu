@@ -24,7 +24,7 @@ export async function GET(
     return NextResponse.json({ message: 'File not found' }, { status: 404 })
   }
 
-  const filePath = path.join(process.cwd(), 'templates', fileConfig.fileName)
+  const filePath = path.join(process.cwd(), 'src', 'templates', fileConfig.fileName)
 
   try {
     const fileBuffer = await fs.readFile(filePath)
