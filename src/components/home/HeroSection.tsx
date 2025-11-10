@@ -69,7 +69,7 @@ export function HeroSection() {
               </Link>
             </Button>
             <p className="max-w-md text-sm text-slate-600 sm:text-base">
-              Signing up is free. Unlock free resources.
+              Signing up is free. Get free resources.
             </p>
           </div>
 
