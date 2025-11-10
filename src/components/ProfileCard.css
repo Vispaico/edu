@@ -37,9 +37,16 @@
   touch-action: none;
 }
 
+
 .team-card {
-  width: min(100%, 24.5rem);
+  width: min(100%, 18.5rem);
   margin-inline: auto;
+}
+
+@media (min-width: 768px) {
+  .team-card {
+    width: min(100%, 24.5rem);
+  }
 }
 
 .team-card .pc-card-shell,

@@ -92,7 +92,10 @@ export default function AboutPage() {
 
           <div className="mt-12 grid grid-cols-1 justify-items-center gap-10 md:grid-cols-2 xl:grid-cols-3">
             {teamMembers.map((member) => (
-              <div key={member.name} className="mx-auto flex w-full max-w-98 flex-col items-center text-center">
+              <div
+                key={member.name}
+                className="mx-auto flex w-full max-w-74 flex-col items-center text-center md:max-w-98"
+              >
                 <ProfileCard
                   avatarUrl={member.avatarUrl}
                   miniAvatarUrl={member.miniAvatarUrl}
