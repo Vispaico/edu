@@ -2,8 +2,6 @@ import { Button } from '@/components/ui/button'
 import Image from 'next/image'
 import Link from 'next/link'
 import ProfileCard from '@/components/ProfileCard'
-import { teamMembers } from '@/data/team'
-
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-gray-50">
