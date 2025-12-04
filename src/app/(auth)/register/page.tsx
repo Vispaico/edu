@@ -51,7 +51,7 @@ export default function RegisterPage() {
       // Simulate success
       alert('Registration successful! Please check your email to verify your account.')
       router.push('/login')
-    } catch (err) {
+    } catch {
       setError('Registration failed. Please try again.')
     } finally {
       setLoading(false)

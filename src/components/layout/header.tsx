@@ -121,7 +121,7 @@ export function Header() {
       <div
         id="mobile-navigation"
         className={`md:hidden transition-[max-height] duration-300 ease-in-out overflow-hidden border-t border-gray-200 bg-white ${
-          isMenuOpen ? 'max-h-[32rem]' : 'max-h-0'
+          isMenuOpen ? 'max-h-128' : 'max-h-0'
         }`}
       >
         <div className="container mx-auto px-4 py-4 space-y-4">
